@@ -1,0 +1,13 @@
+RSS- и Atom-ленты
+
+feedparser 
+
+
+
+RegExp -> python
+LXML vs BeautifulSoup
+
+
+
+
+
