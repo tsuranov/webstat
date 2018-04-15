@@ -1,7 +1,8 @@
-RSS- и Atom-ленты
+mysql vs postgree vs 
 
 feedparser 
 
+RSS- и Atom-ленты
 
 
 RegExp -> python
