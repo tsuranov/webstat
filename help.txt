@@ -1,8 +1,11 @@
-mysql vs postgree vs 
+
+ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ -> python psycopg2 postgresql
+
 
 feedparser 
+https://pythonhosted.org/feedparser/
 
-RSS- è Atom-ëåíòû
+
 
 
 RegExp -> python
