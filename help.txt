@@ -1,10 +1,15 @@
 #Python34
 #postgresql-9.5 
+#asyncpg
 #
+#######################################################################
+RegExp -> python
+LXML vs BeautifulSoup
 #######################################################################
 
 feedparser 
 https://pythonhosted.org/feedparser/
+
 
 
 отслеживание изменений через feed.etag и feed.modified
@@ -17,6 +22,8 @@ feed_update = feedparser.parse(url, etag=last_etag, modified=last_modified)
 
 if feed_update.status == 304:
     # no changes
+
+#######################################################################
 
 #######################################################################
 
@@ -49,21 +56,6 @@ Mon, 16 Apr 2018 12:37:00 +0300
 ##########################
 
 https://lenta.ru/news/2018/04/16/lyskov/
-
-#######################################################################
-
-postgresql
-https://postgrespro.ru/docs/postgresql/9.5/index
-
--> python psycopg2 
-
-
-
-#######################################################################
-RegExp -> python
-LXML vs BeautifulSoup
-
-
 
 
 
