@@ -1,0 +1,45 @@
+#######################################################################
+postgresql
+http://qaru.site/questions/221199/how-do-i-discover-the-structure-of-a-postgresql-database
+https://postgrespro.ru/docs/postgresql/9.5/index
+
+-> python psycopg2 
+
+Установка
+#apt-get install postgresql
+Настройка пользователя
+#useradd postgres -p postgres -U -m
+#chown -R postgres:postgres /usr/local/pgsql
+
+
+#nano /etc/postgresql/<version>/main/postgresql.conf
+    listen_addresses = 'localhost'
+
+#nano /etc/postgresql/9.5/main/pg_hba.conf 
+    host    all             webstat         10.10.10.11/32          md5
+
+
+#psql
+    initdb -D /usr/share/postgresql/9.5/data
+   
+    CREATE USER webuser WITH encrypted password '!23456';
+    CREATE DATABASE webstat OWNER webuser;
+    GRANT ALL PRIVILEGES ON DATABASE "webstat" to postgres
+
+#######################################################################
+
+
+CREATE TABLE rss_lenta_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+summary varchar (1024),
+published  timestamptz,
+link varchar(256)
+);
+
+
+#######################################################################
+
+
+
+
