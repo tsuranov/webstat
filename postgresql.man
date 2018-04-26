@@ -3,7 +3,7 @@ postgresql
 http://qaru.site/questions/221199/how-do-i-discover-the-structure-of-a-postgresql-database
 https://postgrespro.ru/docs/postgresql/9.5/index
 
--> python psycopg2 
+-> python asyncpg
 
 Установка
 #apt-get install postgresql

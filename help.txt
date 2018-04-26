@@ -1,4 +1,5 @@
-#Python34
+#Python35
+#feedparser
 #postgresql-9.5 
 #asyncpg
 #

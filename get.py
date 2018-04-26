@@ -1,27 +1,49 @@
-
+#Парсер RSS
+import sys
+sys.path.append("/usr/local/lib/python3.6/dist-packages")
 import feedparser
+#Клиент для PostgreSQL
+import asyncio
+import asyncpg
+
+
+conn = asyncpg.connect(user='webuser', password='!23456', database='webstat', host='10.10.10.10')
+values = conn.fetch('''SELECT * FROM rss_lenta_ru''')
+conn.close()
+
+
 
 print ("Start read RSS Lenta.ru")
-d = feedparser.parse('https://lenta.ru/rss')
+url = 'https://lenta.ru/rss'
+rssdates = feedparser.parse(url)
 
-print (d.version)
-print (d.feed.title)
-print (d.feed.link)
-print (d.feed.description)
+#print (rssdates.modified_parsed)
+print (rssdates.etag)
+last_etag = rssdates.etag
 
-print (len(d.entries))
+rssdates = feedparser.parse(url, etag=last_etag)
+if rssdates.status == 304:
+    print ("no changes")
 
-for item in d.entries:
-    print ("-----------------------------------", "\n")
-    print (item.title, "\n", item.title_detail.value, "\n")
-    print ("##########################", "\n")
-    print (item.summary, "\n")
-    print ("##########################", "\n")
-    print (item.summary_detail.value, "\n")
-    print ("##########################", "\n")
-    print (item.published)
-    print ("##########################", "\n")
-    print (item.link)
+
+#print (rssdates.version)
+#print (d.feed.title)
+#print (d.feed.link)
+#print (d.feed.description)
+
+#print (len(d.entries))
+
+#for item in d.entries:
+#    print ("-----------------------------------", "\n")
+#    print (item.title, "\n", item.title_detail.value, "\n")
+#    print ("##########################", "\n")
+#    print (item.summary, "\n")
+#    print ("##########################", "\n")
+#    print (item.summary_detail.value, "\n")
+#    print ("##########################", "\n")
+#    print (item.published)
+#    print ("##########################", "\n")
+#    print (item.link)
 
 
 
