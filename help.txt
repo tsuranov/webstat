@@ -16,7 +16,7 @@ dir Python
 ./configure --enable-optimizations
 make
 make test
-checkinstall -D --pkgname=python3_5_5 make altinstall
+checkinstall -D --pkgname=python3_6_5 make install
 
 remove -> dpkg -r python3-6
 
