@@ -1,9 +1,9 @@
 #Парсер RSS
-import sys
-sys.path.append("/usr/local/lib/python3.6/dist-packages")
+#import sys
+#sys.path.append("/usr/local/lib/python3/dist-packages")
 import feedparser
 #Клиент для PostgreSQL
-import asyncio
+#import asyncio
 import asyncpg
 
 

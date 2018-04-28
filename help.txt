@@ -26,7 +26,12 @@ make test
 checkinstall -D --pkgname=python3_6_5 make altinstall
 
 remove -> dpkg -r python3-6
+#######################################################################
 
+
+apt-get install python3-asyncpg
+apt-get install python3-pip
+apt-get install python3-feedparser
 
 #######################################################################
 feedparser 
