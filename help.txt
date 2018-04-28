@@ -7,16 +7,23 @@
 #######################################################################
 install python src
 #######################################################################
-apt-get install build-essential
-apt-get install openssl
 apt-get install zlib1g-dev
+apt-get install build-essential
+apt-get install libncursesw5-dev
+apt-get install libreadline5-dev
+apt-get install libssl-dev
+apt-get install libgdbm-dev
+apt-get install libc6-dev
+apt-get install libsqlite3-dev
+apt-get install tk-dev
+apt-get install python-support
 apt-get install checkinstall
 
 dir Python
-./configure --enable-optimizations
+./configure --with-pydebug --enable-optimizations --enable_shared
 make
 make test
-checkinstall -D --pkgname=python3_6_5 make install
+checkinstall -D --pkgname=python3_6_5 make altinstall
 
 remove -> dpkg -r python3-6
 
