@@ -7,24 +7,33 @@ https://postgrespro.ru/docs/postgresql/9.5/index
 
 Установка
 #apt-get install postgresql
-Настройка пользователя
-#useradd postgres -p postgres -U -m
-#chown -R postgres:postgres /usr/local/pgsql
+#passwd postgres
+#chown -R postgres:postgres /var/lib/postgres
 
+#psql
+Список пользователей:
+   select * from pg_shadow;
 
-#nano /etc/postgresql/<version>/main/postgresql.conf
-    listen_addresses = 'localhost'
-
-#nano /etc/postgresql/9.5/main/pg_hba.conf 
-    host    all             webstat         10.10.10.11/32          md5
-
+Список баз данных:
+   select * from pg_database;
 
 #psql
     initdb -D /usr/share/postgresql/9.5/data
    
+    ALTER USER postgres WITH encrypted password '!23456';
+
+    CREATE DATABASE webstat OWNER postgres;
+
     CREATE USER webuser WITH encrypted password '!23456';
-    CREATE DATABASE webstat OWNER webuser;
-    GRANT ALL PRIVILEGES ON DATABASE "webstat" to postgres
+    GRANT SELECT, INSERT ON DATABASE "rss_lenta_ru" to webuser;
+
+
+Доступ
+#nano /etc/postgresql/<version>/main/postgresql.conf
+    listen_addresses = 'localhost'
+
+#nano /etc/postgresql/9.5/main/pg_hba.conf 
+    host    all             <user>         10.10.10.11/32          md5
 
 #######################################################################
 
