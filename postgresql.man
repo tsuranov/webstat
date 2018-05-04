@@ -42,7 +42,7 @@ CREATE TABLE rss_url (
 rss_id serial PRIMARY KEY,
 name varchar (256),
 url varchar (1024),
-published  timestamptz,
+etag  varchar (256),
 link varchar(256)
 );
 
