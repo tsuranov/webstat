@@ -38,12 +38,20 @@ https://postgrespro.ru/docs/postgresql/9.5/index
 #######################################################################
 
 
+CREATE TABLE rss_url (
+rss_id serial PRIMARY KEY,
+name varchar (256),
+url varchar (1024),
+published  timestamptz,
+link varchar(256)
+);
+
+
 CREATE TABLE rss_lenta_ru (
 news_id serial PRIMARY KEY,
 title varchar (256),
 summary varchar (1024),
-published  timestamptz,
-link varchar(256)
+published  timestamptz
 );
 
 
