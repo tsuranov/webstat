@@ -9,7 +9,7 @@ import asyncio
 import asyncpg
 
 async def run():
-    conn = await asyncpg.connect(user='webuser', password='!23456', database='webstat', host='192.168.1.2')
+    conn = await asyncpg.connect(user='webuser', password='!23456', database='webstat', host='10.10.10.10')
     values = await conn.fetch('''SELECT * FROM rss_lenta_ru''')
     await conn.close()
 
