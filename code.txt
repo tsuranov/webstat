@@ -1,0 +1,56 @@
+#######################################################################
+feedparser
+#######################################################################
+отслеживание изменений через feed.etag и feed.modified
+https://pythonhosted.org/feedparser/http-etag.html
+
+last_etag = feed.etag
+last_modified = feed.modified
+
+feed_update = feedparser.parse(url, etag=last_etag, modified=last_modified)
+
+if feed_update.status == 304:
+    # no changes
+
+
+
+#######################################################################
+feed
+item.title			original feed
+item.title_detail.value		parser's
+item.summary			original feed
+item.summary_detail.value	parser's
+item.published			original feed
+item.published_parsed		parser's
+item.link
+
+
+
+
+#######################################################################
+asyncpg
+#######################################################################
+https://habr.com/post/337420/
+https://magicstack.github.io/asyncpg/current/
+https://magicstack.github.io/asyncpg/current/usage.html
+-> python asyncpg
+
+
+async def gr1():
+	await asyncio.sleep(2)
+
+async def gr2():
+	await asyncio.sleep(2)
+async def gr3():
+	await asyncio.sleep(2)
+
+ioloop = asyncio.get_event_loop()
+tasks = [
+    ioloop.create_task(gr1()),
+    ioloop.create_task(gr2()),
+    ioloop.create_task(gr3())
+]
+ioloop.run_until_complete(asyncio.wait(tasks))
+ioloop.close()
+
+

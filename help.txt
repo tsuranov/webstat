@@ -1,3 +1,6 @@
+#######################################################################
+Use
+#######################################################################
 #Python35
 #postgresql-9.5 
 
@@ -39,29 +42,8 @@ feedparser
 #######################################################################
 https://pythonhosted.org/feedparser/
 
-#######################################################################
-отслеживание изменений через feed.etag и feed.modified
-https://pythonhosted.org/feedparser/http-etag.html
 
-last_etag = feed.etag
-last_modified = feed.modified
 
-feed_update = feedparser.parse(url, etag=last_etag, modified=last_modified)
-
-if feed_update.status == 304:
-    # no changes
-#######################################################################
-
-#######################################################################
-
-feed
-item.title			original feed
-item.title_detail.value		parser's
-item.summary			original feed
-item.summary_detail.value	parser's
-item.published			original feed
-item.published_parsed		parser's
-item.link
 #######################################################################
 
 #######################################################################

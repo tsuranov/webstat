@@ -3,12 +3,9 @@ postgresql
 http://qaru.site/questions/221199/how-do-i-discover-the-structure-of-a-postgresql-database
 https://postgrespro.ru/docs/postgresql/9.5/index
 
-https://magicstack.github.io/asyncpg/current/
-https://magicstack.github.io/asyncpg/current/usage.html
-
--> python asyncpg
-
+#######################################################################
 Установка
+#######################################################################
 #apt-get install postgresql
 #passwd postgres
 #chown -R postgres:postgres /var/lib/postgres
@@ -40,20 +37,23 @@ https://magicstack.github.io/asyncpg/current/usage.html
 
     GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO webuser;
 
-    psql -h 10.10.10.10 -p 5432 -U webuser webstat
-
-    INSERT INTO rss_lenta_ru (title, summary, published) VALUES ('title1', 'xxxyyy', '1971-07-13');
-
+#######################################################################
 Доступ
+#######################################################################
 #nano /etc/postgresqll/<version>/main/postgresql.conf
     listen_addresses = '*'
 
 #nano /etc/postgresql/9.5/main/pg_hba.conf 
     host    all             <user>         10.10.10.11/32          md5
 
+
+    psql -h 10.10.10.10 -p 5432 -U webuser webstat
+
+    INSERT INTO rss_lenta_ru (title, summary, published) VALUES ('title1', 'xxxyyy', '1971-07-13');
+
 #######################################################################
-
-
+Таблицы
+#######################################################################
 CREATE TABLE rss_url (
 rss_id serial PRIMARY KEY,
 name varchar (256),
