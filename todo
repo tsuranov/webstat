@@ -1,8 +1,6 @@
-1. how to use -> asyncio
-	https://tproger.ru/translations/asynchronous-programming-in-python/
-	https://pythondigest.ru/view/4190/
+1. get rss.lenta.ru, add, update
 2. add rss url
-3. script get rss data
+3. script get all rss
 4. https://magicstack.github.io/asyncpg/current/ 
    https://magicstack.github.io/asyncpg/current/usage.html
 5. login md5
