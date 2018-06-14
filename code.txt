@@ -38,11 +38,11 @@ https://magicstack.github.io/asyncpg/current/usage.html
 
 async def gr1():
 	await asyncio.sleep(2)
-
 async def gr2():
 	await asyncio.sleep(2)
 async def gr3():
 	await asyncio.sleep(2)
+
 
 ioloop = asyncio.get_event_loop()
 tasks = [
@@ -52,5 +52,78 @@ tasks = [
 ]
 ioloop.run_until_complete(asyncio.wait(tasks))
 ioloop.close()
+
+#######################################################################
+work
+#######################################################################
+
+#print ("Start read RSS Lenta.ru")
+#url = 'https://lenta.ru/rss'
+#rssdates = feedparser.parse(url)
+
+#print (rssdates.modified_parsed)
+#print (rssdates.etag)
+#last_etag = rssdates.etag
+
+#rssdates = feedparser.parse(url, etag=last_etag)
+#if rssdates.status == 304:
+#    print ("no changes")
+
+
+#print (rssdates.version)
+#print (d.feed.title)
+#print (d.feed.link)
+#print (d.feed.description)
+
+#print (len(d.entries))
+
+#for item in d.entries:
+#    print ("-----------------------------------", "\n")
+#    print (item.title, "\n", item.title_detail.value, "\n")
+#    print ("##########################", "\n")
+#    print (item.summary, "\n")
+#    print ("##########################", "\n")
+#    print (item.summary_detail.value, "\n")
+#    print ("##########################", "\n")
+#    print (item.published)
+#    print ("##########################", "\n")
+#    print (item.link)
+
+async def run():
+    conn = await asyncpg.connect(user='webuser', password='!23456', database='webstat', host='10.10.10.10')
+    values = await conn.fetch('''SELECT * FROM rss_lenta_ru''')
+    await conn.close()
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(run())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

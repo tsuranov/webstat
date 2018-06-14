@@ -29,11 +29,14 @@ https://postgrespro.ru/docs/postgresql/9.5/index
     
     \c webstat;
 
-    GRANT SELECT, INSERT ON TABLE rss_lenta_ru TO webuser;
     GRANT SELECT ON TABLE rss_url TO webuser;
-    
-    GRANT USAGE, SELECT ON SEQUENCE rss_lenta_ru_news_id_seq TO webuser;
+
+    GRANT SELECT, INSERT ON TABLE rss_lenta_ru TO webuser;
+    GRANT SELECT, INSERT ON TABLE rss_vedomosti_ru TO webuser;
+
     GRANT USAGE, SELECT ON SEQUENCE rss_url_rss_id_seq TO webuser;
+    GRANT USAGE, SELECT ON SEQUENCE rss_lenta_ru_news_id_seq TO webuser;
+    GRANT USAGE, SELECT ON SEQUENCE rss_vedomosti_ru_news_id_seq TO webuser;
 
     GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO webuser;
 
@@ -49,6 +52,16 @@ https://postgrespro.ru/docs/postgresql/9.5/index
 
     psql -h 10.10.10.10 -p 5432 -U webuser webstat
 
+#######################################################################
+
+#######################################################################
+    ALTER TABLE rss_url DROP COLUMN link;
+    ALTER TABLE rss_lenta_ru ADD COLUMN link varchar(256);
+
+    INSERT INTO rss_url (name, url) VALUES ('rss_lenta_ru', 'https://lenta.ru/rss');
+    INSERT INTO rss_url (name, url) VALUES ('rss_vedomosti_ru', 'https://www.vedomosti.ru/rss/news');
+
+
     INSERT INTO rss_lenta_ru (title, summary, published) VALUES ('title1', 'xxxyyy', '1971-07-13');
 
 #######################################################################
@@ -58,8 +71,7 @@ CREATE TABLE rss_url (
 rss_id serial PRIMARY KEY,
 name varchar (256),
 url varchar (1024),
-etag  varchar (256),
-link varchar(256)
+etag  varchar (256)
 );
 
 
@@ -67,12 +79,20 @@ CREATE TABLE rss_lenta_ru (
 news_id serial PRIMARY KEY,
 title varchar (256),
 summary varchar (1024),
-published  timestamptz
+published  timestamptz,
+link varchar(256)
 );
 
+CREATE TABLE rss_vedomosti_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+summary varchar (1024),
+published  timestamptz,
+link varchar(256)
+);
 
 #######################################################################
-
+results = cursor.fetchall()
 
 
 
