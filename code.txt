@@ -65,6 +65,7 @@ work
 #print (rssdates.etag)
 #last_etag = rssdates.etag
 
+#etag=rssdates.etag, modified=rssdates.modified
 #rssdates = feedparser.parse(url, etag=last_etag)
 #if rssdates.status == 304:
 #    print ("no changes")
@@ -101,13 +102,25 @@ loop.run_until_complete(run())
 
 
 
+#print (item.published, "\n")
+Fri, 15 Jun 2018 13:49:00 +0300
+Fri, 15 Jun 2018 13:47:00 +0300
+Fri, 15 Jun 2018 13:41:00 +0300
+Fri, 15 Jun 2018 13:32:00 +0300
+Fri, 15 Jun 2018 13:30:57 +0300
+Fri, 15 Jun 2018 13:30:51 +0300
+"%a, %d %b %Y %H:%M:%S +0000"
 
 
+#postgresql
+1971-07-13 00:00:00+05
+
+strftime("%Y-%m-%d %H:%M:%S+00")
 
 
-
-
-
+print ("\n")
+tt = datetime.datetime.strptime("Fri, 15 Jun 2018 13:30:51 +0300", "%a, %d %b %Y %H:%M:%S %z")
+print ("\n")
 
 
 

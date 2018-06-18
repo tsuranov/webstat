@@ -9,7 +9,9 @@ import asyncio
 import asyncpg
 #official PostgreSQL client library
 import psycopg2
-
+#
+import time
+import datetime
 #Получаем список rss-лент
 conn = psycopg2.connect(dbname='webstat', user='webuser', password='!23456',  host='10.10.10.10')
 cursor = conn.cursor()
@@ -31,8 +33,10 @@ async def get_rss(rss):
     #Запись в PostgreSQL
     conn = await asyncpg.connect(user='webuser', password='!23456', database='webstat', host='10.10.10.10')
     for item in rssdates.entries:
-        values = await conn.execute ("INSERT INTO $1 (title, summary, published, link) VALUES ($2, $3, $4)", 
-            rss[1], item.title, item.summary, item.published, item.link) 
+        #Парсим время публикации
+        published = datetime.datetime.strptime(item.published, "%a, %d %b %Y %H:%M:%S %z")
+        await conn.execute ('INSERT INTO ' + rss[1] + ' (title, summary, published, link) VALUES ($1, $2, $3, $4)', item.title, item.summary, published, item.link) 
+    await conn.execute ('UPDATE rss_url SET etag=$1 WHERE name=$2', rssdates.etag, rss[1]) 
     await conn.close()
 
 async def async_get_rss():

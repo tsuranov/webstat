@@ -26,10 +26,11 @@ https://postgrespro.ru/docs/postgresql/9.5/index
     
     CREATE USER webuser WITH encrypted password '!23456';
     GRANT CONNECT ON DATABASE webstat TO webuser;
-    
+
+#Выбор БД    
     \c webstat;
 
-    GRANT SELECT ON TABLE rss_url TO webuser;
+    GRANT SELECT, UPDATE ON TABLE rss_url TO webuser;
 
     GRANT SELECT, INSERT ON TABLE rss_lenta_ru TO webuser;
     GRANT SELECT, INSERT ON TABLE rss_vedomosti_ru TO webuser;

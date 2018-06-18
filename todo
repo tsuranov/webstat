@@ -1,5 +1,5 @@
-1. get rss.lenta.ru rss_vedomosti_ru       
-2. add new, update
+1. add new rss.lenta.ru 
+2. rss_vedomosti_ru       
 3. script get all rss
 4. https://magicstack.github.io/asyncpg/current/ 
    https://magicstack.github.io/asyncpg/current/usage.html
