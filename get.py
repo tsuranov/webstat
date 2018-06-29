@@ -32,10 +32,17 @@ async def get_rss(rss):
 
     #Запись в PostgreSQL
     conn = await asyncpg.connect(user='webuser', password='!23456', database='webstat', host='10.10.10.10')
+    #Дата последней новости
+    #
+    last_published = await conn.fetchrow('SELECT MAX( published ) FROM ' + rss[1] + ' ;')
+    #
     for item in rssdates.entries:
-        #Парсим время публикации
+        #Парсим время публикации в формат MySQL
         published = datetime.datetime.strptime(item.published, "%a, %d %b %Y %H:%M:%S %z")
-        await conn.execute ('INSERT INTO ' + rss[1] + ' (title, summary, published, link) VALUES ($1, $2, $3, $4)', item.title, item.summary, published, item.link) 
+        if published > last_published[0]:
+            await conn.execute ('INSERT INTO ' + rss[1] + ' (title, summary, published, link) VALUES ($1, $2, $3, $4)', item.title, item.summary, published, item.link) 
+        else:
+            print("published !> last_published", published, '!>', last_published)
     await conn.execute ('UPDATE rss_url SET etag=$1 WHERE name=$2', rssdates.etag, rss[1]) 
     await conn.close()
 

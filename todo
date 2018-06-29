@@ -1,4 +1,5 @@
-1. add new rss.lenta.ru 
+0. rssdates.status и etag
+1. last_published в переменную, а не в list
 2. rss_vedomosti_ru       
 3. script get all rss
 4. https://magicstack.github.io/asyncpg/current/ 

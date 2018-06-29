@@ -93,6 +93,24 @@ link varchar(256)
 );
 
 #######################################################################
+
+#######################################################################
+su postgres
+psql
+\c webstat;
+
+
+SELECT news_id, title, published FROM rss_lenta_ru ORDER BY news_id DESC LIMIT 5;
+SELECT published FROM rss_lenta_ru ORDER BY news_id DESC LIMIT 1;
+SELECT * FROM rss_url;
+
+DELETE FROM rss_lenta_ru;
+
+UPDATE rss_url SET etag = '' WHERE name = 'rss_lenta_ru';
+
+
+
+
 results = cursor.fetchall()
 
 
