@@ -64,7 +64,10 @@ https://postgrespro.ru/docs/postgresql/9.5/index
 
 
     INSERT INTO rss_lenta_ru (title, summary, published) VALUES ('title1', 'xxxyyy', '1971-07-13');
+    INSERT INTO rss_vedomosti_ru (title, summary, published) VALUES ('title1', 'xxxyyy', '1971-07-13');
 
+    ALTER TABLE rss_lenta_ru DROP COLUMN summary;
+    summary varchar (1024),
 #######################################################################
 Таблицы
 #######################################################################
@@ -79,7 +82,6 @@ etag  varchar (256)
 CREATE TABLE rss_lenta_ru (
 news_id serial PRIMARY KEY,
 title varchar (256),
-summary varchar (1024),
 published  timestamptz,
 link varchar(256)
 );
@@ -87,7 +89,6 @@ link varchar(256)
 CREATE TABLE rss_vedomosti_ru (
 news_id serial PRIMARY KEY,
 title varchar (256),
-summary varchar (1024),
 published  timestamptz,
 link varchar(256)
 );

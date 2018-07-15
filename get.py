@@ -21,12 +21,13 @@ conn.close()
 
 #Получаем rss
 # rss[0] id
-# rss[1] таблица
+# rss[1] таблица   
 # rss[2] url
 # rss[3] last_etag
 async def get_rss(rss):
     #Получение rss
     rssdates = feedparser.parse(rss[2], etag=rss[3])
+
     if rssdates.status == 304:
         return ("no changes")
 
@@ -40,7 +41,7 @@ async def get_rss(rss):
         #Парсим время публикации в формат MySQL
         published = datetime.datetime.strptime(item.published, "%a, %d %b %Y %H:%M:%S %z")
         if published > last_published[0]:
-            await conn.execute ('INSERT INTO ' + rss[1] + ' (title, summary, published, link) VALUES ($1, $2, $3, $4)', item.title, item.summary, published, item.link) 
+            await conn.execute ('INSERT INTO ' + rss[1] + ' (title, published, link) VALUES ($1, $2, $3)', item.title, published, item.link) 
         else:
             print("published !> last_published", published, '!>', last_published)
     await conn.execute ('UPDATE rss_url SET etag=$1 WHERE name=$2', rssdates.etag, rss[1]) 
@@ -48,7 +49,7 @@ async def get_rss(rss):
 
 async def async_get_rss():
     tasks = [asyncio.ensure_future(
-        get_rss( url_list[i] )) for i in range(0, 1)]
+        get_rss( url_list[i] )) for i in range(0, 2)]
     await asyncio.wait(tasks)
 
 loop = asyncio.get_event_loop()
