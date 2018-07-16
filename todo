@@ -1,12 +1,7 @@
-0. rssdates.status и etag -> status feedparser.parse
+0. 
 1. last_published в переменную, а не в list
-2. top 10 rss
-    http://www.interfax.ru/rss.asp
-    http://tass.ru/rss/v2.xml
-    http://www.rosbalt.ru/feed/
-    https://regnum.ru/rss/news
-    http://static.feed.rbc.ru/rbc/logical/footer/news.rss
-    http://www.mk.ru/rss/news/index.xml
+2. status & analysis
+3. top 10 rss
 
     https://www.gazeta.ru/export/rss/first.xml
     https://www.gazeta.ru/export/rss/lenta.xml
@@ -14,12 +9,16 @@
 
     https://www.oreanda.ru/rss01/rss01.txt
 
-3. 
-4. https://magicstack.github.io/asyncpg/current/ 
-   https://magicstack.github.io/asyncpg/current/usage.html
+4. 
 5. login md5
 7.  vk.ru
     https://news.rambler.ru/rss/
+
+##################################################################
+Оптимизация
+##################################################################
+0. rssdates.status и etag -> status feedparser.parse
+
 
 ##################################################################
 GOOGLE

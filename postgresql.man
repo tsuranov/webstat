@@ -16,6 +16,8 @@ https://postgrespro.ru/docs/postgresql/9.5/index
 
 Список баз данных:
    select * from pg_database;
+Список таблиц в базе
+    select * from information_schema.tables where table_schema='public';
 
 #psql
     initdb -D /usr/share/postgresql/9.5/data
@@ -35,9 +37,24 @@ https://postgrespro.ru/docs/postgresql/9.5/index
     GRANT SELECT, INSERT ON TABLE rss_lenta_ru TO webuser;
     GRANT SELECT, INSERT ON TABLE rss_vedomosti_ru TO webuser;
 
+    GRANT SELECT, INSERT ON TABLE rss_interfax_ru TO webuser;
+    GRANT SELECT, INSERT ON TABLE rss_tass_ru TO webuser;
+    GRANT SELECT, INSERT ON TABLE rss_rosbalt_ru TO webuser;
+    GRANT SELECT, INSERT ON TABLE rss_regnum_ru TO webuser;
+    GRANT SELECT, INSERT ON TABLE rss_rbc_ru TO webuser;
+    GRANT SELECT, INSERT ON TABLE rss_mk_ru TO webuser;
+
+
     GRANT USAGE, SELECT ON SEQUENCE rss_url_rss_id_seq TO webuser;
     GRANT USAGE, SELECT ON SEQUENCE rss_lenta_ru_news_id_seq TO webuser;
     GRANT USAGE, SELECT ON SEQUENCE rss_vedomosti_ru_news_id_seq TO webuser;
+
+    GRANT USAGE, SELECT ON SEQUENCE rss_interfax_ru_news_id_seq TO webuser;
+    GRANT USAGE, SELECT ON SEQUENCE rss_tass_ru_news_id_seq TO webuser;
+    GRANT USAGE, SELECT ON SEQUENCE rss_rosbalt_ru_news_id_seq TO webuser;
+    GRANT USAGE, SELECT ON SEQUENCE rss_regnum_ru_news_id_seq TO webuser;
+    GRANT USAGE, SELECT ON SEQUENCE rss_rbc_ru_news_id_seq TO webuser;
+    GRANT USAGE, SELECT ON SEQUENCE rss_mk_ru_news_id_seq TO webuser;
 
     GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO webuser;
 
@@ -61,10 +78,33 @@ https://postgrespro.ru/docs/postgresql/9.5/index
 
     INSERT INTO rss_url (name, url) VALUES ('rss_lenta_ru', 'https://lenta.ru/rss');
     INSERT INTO rss_url (name, url) VALUES ('rss_vedomosti_ru', 'https://www.vedomosti.ru/rss/news');
+    INSERT INTO rss_url (name, url) VALUES ('rss_interfax_ru', 'http://www.interfax.ru/rss.asp');
+    INSERT INTO rss_url (name, url) VALUES ('rss_tass_ru', 'http://tass.ru/rss/v2.xml');
+    INSERT INTO rss_url (name, url) VALUES ('rss_rosbalt_ru', 'http://www.rosbalt.ru/feed/');
+    INSERT INTO rss_url (name, url) VALUES ('rss_regnum_ru', 'https://regnum.ru/rss/news');
+    INSERT INTO rss_url (name, url) VALUES ('rss_rbc_ru', 'http://static.feed.rbc.ru/rbc/logical/footer/news.rss');
+    INSERT INTO rss_url (name, url) VALUES ('rss_mk_ru', 'http://www.mk.ru/rss/news/index.xml');
 
 
-    INSERT INTO rss_lenta_ru (title, summary, published) VALUES ('title1', 'xxxyyy', '1971-07-13');
-    INSERT INTO rss_vedomosti_ru (title, summary, published) VALUES ('title1', 'xxxyyy', '1971-07-13');
+    INSERT INTO rss_lenta_ru (title,  published) VALUES ('title1',  '1971-07-13');
+    INSERT INTO rss_vedomosti_ru (title,  published) VALUES ('title1',  '1971-07-13');
+    INSERT INTO rss_interfax_ru (title,  published) VALUES ('title1',  '1971-07-13');
+    INSERT INTO rss_tass_ru (title,  published) VALUES ('title1',  '1971-07-13');
+    INSERT INTO rss_rosbalt_ru (title,  published) VALUES ('title1',  '1971-07-13');
+    INSERT INTO rss_regnum_ru (title,  published) VALUES ('title1',  '1971-07-13');
+    INSERT INTO rss_rbc_ru (title,  published) VALUES ('title1',  '1971-07-13');
+    INSERT INTO rss_mk_ru (title,  published) VALUES ('title1',  '1971-07-13');
+
+    DELETE FROM rss_lenta_ru;
+    DELETE FROM rss_vedomosti_ru;
+    DELETE FROM rss_interfax_ru;
+    DELETE FROM rss_tass_ru;
+    DELETE FROM rss_rosbalt_ru;
+    DELETE FROM rss_regnum_ru;
+    DELETE FROM rss_rbc_ru;
+    DELETE FROM rss_mk_ru;
+
+    
 
     ALTER TABLE rss_lenta_ru DROP COLUMN summary;
     summary varchar (1024),
@@ -87,6 +127,48 @@ link varchar(256)
 );
 
 CREATE TABLE rss_vedomosti_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+published  timestamptz,
+link varchar(256)
+);
+
+CREATE TABLE rss_interfax_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+published  timestamptz,
+link varchar(256)
+);
+
+CREATE TABLE rss_tass_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+published  timestamptz,
+link varchar(256)
+);
+
+CREATE TABLE rss_rosbalt_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+published  timestamptz,
+link varchar(256)
+);
+
+CREATE TABLE rss_regnum_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+published  timestamptz,
+link varchar(256)
+);
+
+CREATE TABLE rss_rbc_ru (
+news_id serial PRIMARY KEY,
+title varchar (256),
+published  timestamptz,
+link varchar(256)
+);
+
+CREATE TABLE rss_mk_ru (
 news_id serial PRIMARY KEY,
 title varchar (256),
 published  timestamptz,

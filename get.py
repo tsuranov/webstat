@@ -27,6 +27,7 @@ conn.close()
 async def get_rss(rss):
     #Получение rss
     rssdates = feedparser.parse(rss[2], etag=rss[3])
+    print ("Recive ===>", rss[1])
 
     if rssdates.status == 304:
         return ("no changes")
@@ -43,13 +44,14 @@ async def get_rss(rss):
         if published > last_published[0]:
             await conn.execute ('INSERT INTO ' + rss[1] + ' (title, published, link) VALUES ($1, $2, $3)', item.title, published, item.link) 
         else:
-            print("published !> last_published", published, '!>', last_published)
-    await conn.execute ('UPDATE rss_url SET etag=$1 WHERE name=$2', rssdates.etag, rss[1]) 
+            print(rss[1], published)
+    #await conn.execute ('UPDATE rss_url SET etag=$1 WHERE name=$2', rssdates.etag, rss[1]) 
+    print ("Insert ===>", rss[1])
     await conn.close()
 
 async def async_get_rss():
     tasks = [asyncio.ensure_future(
-        get_rss( url_list[i] )) for i in range(0, 2)]
+        get_rss( url_list[i] )) for i in range(4, 8)]
     await asyncio.wait(tasks)
 
 loop = asyncio.get_event_loop()

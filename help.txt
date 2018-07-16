@@ -42,7 +42,11 @@ feedparser
 #######################################################################
 https://pythonhosted.org/feedparser/
 
-
+#######################################################################
+asyncpg is a database interface
+#######################################################################
+https://magicstack.github.io/asyncpg/current/ 
+https://magicstack.github.io/asyncpg/current/usage.html
 
 #######################################################################
 
