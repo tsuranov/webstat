@@ -8,30 +8,7 @@ Use
 #asyncpg
 
 #######################################################################
-install python src
-#######################################################################
-apt-get install zlib1g-dev
-apt-get install build-essential
-apt-get install libncursesw5-dev
-apt-get install libreadline5-dev
-apt-get install libssl-dev
-apt-get install libgdbm-dev
-apt-get install libc6-dev
-apt-get install libsqlite3-dev
-apt-get install tk-dev
-apt-get install python-support
-apt-get install checkinstall
-
-dir Python
-./configure --with-pydebug --enable-optimizations --enable_shared
-make
-make test
-checkinstall -D --pkgname=python3_6_5 make altinstall
-
-remove -> dpkg -r python3-6
-
-#######################################################################
-or install python pkg.deb 
+install python pkg.deb 
 #######################################################################
 apt-get install python3-asyncpg
 apt-get install python3-pip
@@ -41,13 +18,22 @@ apt-get install python3-feedparser
 feedparser 
 #######################################################################
 https://pythonhosted.org/feedparser/
+отслеживание изменений через feed.etag и feed.modified
+https://pythonhosted.org/feedparser/http-etag.html
+
+#######################################################################
+ asyncio
+#######################################################################
+https://docs.python.org/3.5/library/asyncio.html
 
 #######################################################################
 asyncpg is a database interface
 #######################################################################
 https://magicstack.github.io/asyncpg/current/ 
 https://magicstack.github.io/asyncpg/current/usage.html
-
+https://habr.com/post/337420/
+https://magicstack.github.io/asyncpg/current/
+https://magicstack.github.io/asyncpg/current/usage.html
 #######################################################################
 
 #######################################################################

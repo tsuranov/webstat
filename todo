@@ -1,8 +1,3 @@
-0.  прочитать https://docs.python.org/3/library/asyncio.html
-    добавить обработку ошибок https://docs.python.org/3/library/asyncio-dev.html
-
-    Пример https://toster.ru/q/473147
-
 1. last_published в переменную, а не в list
 2. status & analysis
 3. top 10 rss

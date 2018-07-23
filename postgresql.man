@@ -40,7 +40,7 @@ https://postgrespro.ru/docs/postgresql/9.5/index
     GRANT SELECT, INSERT ON TABLE rss_interfax_ru TO webuser;
     GRANT SELECT, INSERT ON TABLE rss_tass_ru TO webuser;
     GRANT SELECT, INSERT ON TABLE rss_rosbalt_ru TO webuser;
-    GRANT SELECT, INSERT ON TABLE rss_regnum_ru TO webuser;
+    GsRANT SELECT, INSERT ON TABLE rss_regnum_ru TO webuser;
     GRANT SELECT, INSERT ON TABLE rss_rbc_ru TO webuser;
     GRANT SELECT, INSERT ON TABLE rss_mk_ru TO webuser;
 
