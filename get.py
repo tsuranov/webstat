@@ -51,7 +51,7 @@ async def get_rss(rss):
 
 async def async_get_rss():
     tasks = [asyncio.ensure_future(
-        get_rss( url_list[i] )) for i in range(4, 8)]
+        get_rss( url_list[i] )) for i in range(0, 8)]
     await asyncio.wait(tasks)
 
 loop = asyncio.get_event_loop()
