@@ -1,0 +1,42 @@
+#######################################################################
+Use
+#######################################################################
+#Python35
+#postgresql-9.5 
+
+#feedparser
+#asyncpg
+
+#######################################################################
+install python pkg.deb 
+#######################################################################
+apt-get install python3-asyncpg
+apt-get install python3-pip
+apt-get install python3-feedparser
+
+#######################################################################
+feedparser 
+#######################################################################
+https://pythonhosted.org/feedparser/
+отслеживание изменений через feed.etag и feed.modified
+https://pythonhosted.org/feedparser/http-etag.html
+
+#######################################################################
+ asyncio
+#######################################################################
+https://docs.python.org/3.5/library/asyncio.html
+
+#######################################################################
+asyncpg is a database interface
+#######################################################################
+https://magicstack.github.io/asyncpg/current/ 
+https://magicstack.github.io/asyncpg/current/usage.html
+https://habr.com/post/337420/
+https://magicstack.github.io/asyncpg/current/
+https://magicstack.github.io/asyncpg/current/usage.html
+#######################################################################
+
+#######################################################################
+RegExp -> python
+LXML vs BeautifulSoup
+

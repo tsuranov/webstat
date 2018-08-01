@@ -1,0 +1,21 @@
+Текущее состояние
+git status
+
+Добавление в реп
+git add *
+
+Коммит
+git commit -m "comment"
+
+Просмотр изменений
+git show --name-only
+git show get_rss.py
+
+Cписка всех коммитов
+git log
+
+
+
+
+
+

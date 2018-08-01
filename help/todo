@@ -1,0 +1,30 @@
+0. ограничение по коннекту pg
+1. вывод в log & run cron
+2. statistic & analysis
+3. add rss
+    ...
+    https://www.gazeta.ru/export/rss/first.xml
+    https://www.gazeta.ru/export/rss/lenta.xml
+    https://www.gazeta.ru/export/rss/lastnews.xml
+
+    https://www.oreanda.ru/rss01/rss01.txt
+
+4. 
+5. login md5
+7.  vk.ru
+    https://news.rambler.ru/rss/
+
+##################################################################
+Оптимизация
+##################################################################
+0. rssdates.status и etag -> status feedparser.parse
+1. https://habr.com/post/132554/
+
+##################################################################
+GOOGLE
+##################################################################
+0. https://habr.com/post/196382/
+1. aiohttp
+2. Petrovich
+3. python text analysis olap data mining
+4. http://malukhin.ru/?p=2533
