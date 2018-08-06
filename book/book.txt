@@ -1,0 +1,46 @@
+text data mining
+####################################################################
+Автоматическое извлечение ключевых терминов -> генерация ключевых терминов
+
+Методы
+ранжирования всех словоформ или лексем по частоте, а также вычисление n-грам
+
+Список проектов предоставляющих API
+http://pullenti.ru/competitorpage.aspx?AspxAutoDetectCookieSupport=1
+
+Проекты
+http://pullenti.ru/Default.aspx
+Выделение именованных сущностей из неструктурированных текстов (Named Entity Recognition) и другие процедуры обработки. C# конвертируется в Python
+
+https://github.com/igor-shevchenko/rutermextract 
+Библиотека для извлечения ключевых слов из текстов на русском языке. Для морфологического анализа используется pymorphy2. Разработка вдохновлена библиотекой topia.termextract, которая делает то же самое с англоязычными текстами.
+
+https://github.com/yandex/tomita-parser/
+Томита-парсер создан для извлечения структурированных данных из текста на естественном языке. Вычленение фактов происходит при помощи контекстно-свободных грамматик и словарей ключевых слов. Парсер позволяет писать свои грамматики и добавлять словари для нужного языка. 
+
+
+
+
+
+
+
+
+Практический итог
+https://www.i-teco.ru/solutions/business_intelligence_products/analytical_courier/
+####################################################################
+
+Statistics in Python
+https://www.upwork.com/hiring/data/15-python-libraries-data-science/
+https://source.opennews.org/articles/introducing-agate/
+https://pypi.org/project/agate/
+https://www.scipy-lectures.org/packages/statistics/index.html
+http://www.nltk.org/book/
+https://ru.wikipedia.org/wiki/Pandas
+https://ru.wikipedia.org/wiki/NumPy
+
+Visual
+http://bokeh.pydata.org/en/latest/
+
+
+
+
