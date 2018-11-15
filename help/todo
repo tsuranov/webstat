@@ -1,19 +1,27 @@
-0. ограничение по коннекту pg
+##################################################################
+Coding
+##################################################################
+-2. все через 
+    1. список рсс
+    2. добавление в pg
+    убрать asyncio и async_get_rss
+-1. postgresql log
+0. ограничение по коннекту pg и insert проверка на кавычки и прочее
 1. вывод в log & run cron
 2. statistic & analysis
-3. add rss
-    ...
-    https://www.gazeta.ru/export/rss/first.xml
-    https://www.gazeta.ru/export/rss/lenta.xml
-    https://www.gazeta.ru/export/rss/lastnews.xml
+3. 
 
-    https://www.oreanda.ru/rss01/rss01.txt
 
 4. 
 5. login md5
 7.  vk.ru
     https://news.rambler.ru/rss/
+        ...
+    https://www.gazeta.ru/export/rss/first.xml
+    https://www.gazeta.ru/export/rss/lenta.xml
+    https://www.gazeta.ru/export/rss/lastnews.xml
 
+    https://www.oreanda.ru/rss01/rss01.txt
 ##################################################################
 Оптимизация
 ##################################################################
