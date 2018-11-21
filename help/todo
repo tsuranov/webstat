@@ -1,18 +1,11 @@
 ##################################################################
 Coding
 ##################################################################
--2. все через 
-    1. список рсс
-    2. добавление в pg
-    убрать asyncio и async_get_rss
--1. postgresql log
-0. ограничение по коннекту pg и insert проверка на кавычки и прочее
+0. проверка title на < 256 символов
 1. вывод в log & run cron
 2. statistic & analysis
 3. 
-
-
-4. 
+4. postgresql log
 5. login md5
 7.  vk.ru
     https://news.rambler.ru/rss/
@@ -26,8 +19,13 @@ Coding
 Оптимизация
 ##################################################################
 0. rssdates.status и etag -> status feedparser.parse
+    Добавление новостей по ETAG или по дате?
 1. https://habr.com/post/132554/
+2. Попробовать feedparser через asyncio
+    https://habr.com/post/337420/
+    http://itscreen.tk/blog/25-python-3-intro-v-asyncio/
 2. executemany
+
 ##################################################################
 GOOGLE
 ##################################################################
