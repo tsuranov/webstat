@@ -24,6 +24,11 @@ Coding
 2. Попробовать feedparser через asyncio
     https://habr.com/post/337420/
     http://itscreen.tk/blog/25-python-3-intro-v-asyncio/
+    #
+    #async def async_get_rss():
+    #   tasks = [asyncio.ensure_future(
+    #       get_rss( url_list[i] )) for i in range(0, len(url_list))]
+    #   await asyncio.wait(tasks)
 2. executemany
 
 ##################################################################

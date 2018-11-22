@@ -1,0 +1,19 @@
+2018-11-22 18:55:14,391 - get_rss - INFO - Start get_rss()
+2018-11-22 18:55:14,400 - get_rss - INFO - List url rss recived
+2018-11-22 18:55:32,335 - get_rss - INFO - Recive rss: rss_vedomosti_ru
+2018-11-22 18:55:32,467 - get_rss - INFO - Insert news 200
+2018-11-22 18:56:12,585 - get_rss - INFO - Recive rss: rss_lenta_ru
+2018-11-22 18:56:12,685 - get_rss - INFO - Insert news 200
+2018-11-22 18:56:16,534 - get_rss - INFO - Recive rss: rss_interfax_ru
+2018-11-22 18:56:16,549 - get_rss - INFO - Insert news 25
+2018-11-22 18:56:29,285 - get_rss - INFO - Recive rss: rss_tass_ru
+2018-11-22 18:56:29,339 - get_rss - INFO - Insert news 100
+2018-11-22 18:56:43,750 - get_rss - INFO - Recive rss: rss_rosbalt_ru
+2018-11-22 18:56:43,801 - get_rss - INFO - Insert news 100
+2018-11-22 18:57:01,766 - get_rss - INFO - Recive rss: rss_regnum_ru
+2018-11-22 18:57:01,818 - get_rss - INFO - Insert news 100
+2018-11-22 18:57:24,115 - get_rss - INFO - Recive rss: rss_rbc_ru
+2018-11-22 18:57:24,198 - get_rss - INFO - Insert news 160
+2018-11-22 18:57:36,630 - get_rss - INFO - Recive rss: rss_mk_ru
+2018-11-22 18:57:36,670 - get_rss - INFO - Insert news 75
+2018-11-22 18:57:36,671 - get_rss - INFO - rss_mk_ru: ok!
