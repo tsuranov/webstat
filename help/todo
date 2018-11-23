@@ -2,12 +2,13 @@
 Coding
 ##################################################################
 0. проверка title на < 256 символов
-1. вывод в log & run cron
-2. statistic & analysis
-3. 
-4. postgresql log
-5. login md5
-7.  vk.ru
+1. run cron
+2. требуемый объем под базу?
+3. сервер?
+4. statistic & analysis
+5. postgresql log
+6. login md5
+8.  vk.ru
     https://news.rambler.ru/rss/
         ...
     https://www.gazeta.ru/export/rss/first.xml
