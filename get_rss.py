@@ -57,7 +57,7 @@ async def get_rss():
                 #Парсим время публикации в формат MySQL
                 published = datetime.datetime.strptime(item.published, "%a, %d %b %Y %H:%M:%S %z")
                 if published > last_published:
-                    #await conn.execute ('INSERT INTO ' + rss[1] + ' (title, published, link) VALUES ($1, $2, $3)', item.title, published, item.link) 
+                    await con.execute ('''INSERT INTO ''' + rss[1] + ''' (title, published, link) VALUES ($1, $2, $3);''', item.title[:255], published, item.link[:255]) 
                     i += 1
                 else:
                     print(rss[1], published)
@@ -85,6 +85,8 @@ async def get_rss():
     finally:
         await con.close()
         return 0
+
+
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(get_rss())

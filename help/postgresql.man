@@ -10,6 +10,9 @@ https://postgrespro.ru/docs/postgresql/9.5/index
 #passwd postgres
 #chown -R postgres:postgres /var/lib/postgres
 
+Размер каталога
+#du -sh /var/lib/postgresql/9.5/main/base/*
+
 #psql
 Список пользователей:
    select * from pg_shadow;
