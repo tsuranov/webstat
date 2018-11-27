@@ -1,13 +1,15 @@
 ##################################################################
 Coding
 ##################################################################
-1. run cron
+1. 
 2. требуемый объем под базу?
 3. сервер?
 4. statistic & analysis
 5. postgresql log
 6. login md5
-8.  vk.ru
+8.  vk
+    twitter
+
     https://news.rambler.ru/rss/
         ...
     https://www.gazeta.ru/export/rss/first.xml
@@ -34,8 +36,12 @@ Coding
 ##################################################################
 GOOGLE
 ##################################################################
+-1. python text  mining
 0. https://habr.com/post/196382/
 1. aiohttp
-2. Petrovich
+2. Petrovich - для склонения русскоязычных имён, фамилий и отчеств.
 3. python text analysis olap data mining
 4. http://malukhin.ru/?p=2533
+5. scrapy
+6. urllib
+

@@ -1,7 +1,20 @@
+##################################################################
+statistic & analysis
+##################################################################
 text data mining
-####################################################################
-Автоматическое извлечение ключевых терминов -> генерация ключевых терминов
+##################################################################
 
+
+
+- Удаление стоп-слов.
+- Преобразование каждого слова к его нормальной форме.
+- Приведение регистра.
+- Извлечение ключевых терминов.
+
+
+
+
+####################################################################
 Методы
 ранжирования всех словоформ или лексем по частоте, а также вычисление n-грам
 
@@ -17,12 +30,6 @@ https://github.com/igor-shevchenko/rutermextract
 
 https://github.com/yandex/tomita-parser/
 Томита-парсер создан для извлечения структурированных данных из текста на естественном языке. Вычленение фактов происходит при помощи контекстно-свободных грамматик и словарей ключевых слов. Парсер позволяет писать свои грамматики и добавлять словари для нужного языка. 
-
-
-
-
-
-
 
 
 Практический итог
@@ -44,3 +51,50 @@ http://bokeh.pydata.org/en/latest/
 
 
 
+https://www.kaggle.com/c/word2vec-nlp-tutorial#description
+DATA MINING https://www.intuit.ru/studies/courses/6/6/info
+
+https://www.analyticsvidhya.com/blog/2018/02/the-different-methods-deal-text-data-predictive-python/
+
+https://github.com/wendykan/DeepLearningMovies
+https://github.com/donnemartin/data-science-ipython-notebooks
+https://github.com/rasbt/pattern_classification
+https://github.com/andersbll/deeppy
+
+
+https://habr.com/post/414165/
+
+https://medium.com/activewizards-machine-learning-company/comparison-of-top-6-python-nlp-libraries-c4ce160237eb
+
+
+
+
+Deep Learning
+
+Python based Orange and NTLK
+
+
+
+
+Polyglot 
+Gensim 
+Scikit-learn 
+Spacy 
+nltk 
+    http://www.nltk.org/
+    https://www.taygan.co/blog/2018/01/12/text-mining-potus-with-python
+
+textmining 1.0 https://www.christianpeccei.com/textmining/
+
+
+scrapy
+urllib
+
+Google's Word2Vec    -> for natural language processing
+
+Beautiful Soup library     -> First, we'll remove the HTML tags.
+
+R For Data Science Talks?????
+
+
+whatsapp https://www.zeolearn.com/magazine/introduction-to-text-mining-in-whatsapp-chats-using-python-part-1

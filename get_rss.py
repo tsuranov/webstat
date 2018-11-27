@@ -59,8 +59,8 @@ async def get_rss():
                 if published > last_published:
                     await con.execute ('''INSERT INTO ''' + rss[1] + ''' (title, published, link) VALUES ($1, $2, $3);''', item.title[:255], published, item.link[:255]) 
                     i += 1
-                else:
-                    print(rss[1], published)
+                #else:
+                    #print(rss[1], published)
             #await conn.execute ('UPDATE rss_url SET etag=$1 WHERE name=$2', rssdates.etag, rss[1]) 
             #print ("Insert news "  +  str(i) ) #+ " in db ===>" + rss[1])
             logger.info("Insert news "  +  str(i) )
