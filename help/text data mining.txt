@@ -3,20 +3,36 @@ statistic & analysis
 ##################################################################
 text data mining
 ##################################################################
+Цель --->>> ???
+            выделение фамилий -> личностей
 
-
+            генерация сюжетов
+            аннотации  к  новостям
+##################################################################
 
 - Удаление стоп-слов.
+- Выделение N-грамм
 - Преобразование каждого слова к его нормальной форме.
 - Приведение регистра.
 - Извлечение ключевых терминов.
 
-
+анализ
+    графематический
+    морфологический
+    синтаксический
+    семантический
 
 
 ####################################################################
-Методы
-ранжирования всех словоформ или лексем по частоте, а также вычисление n-грам
+Посмотреть сервисы
+    OpenCalais
+    ExtractorLive.com
+    Yahoo! Term Extraction Web Service
+    Система  Maui
+    АОТ «ДИАЛИНГ»
+    «Ашманов  и  партнёры»
+
+####################################################################
 
 Список проектов предоставляющих API
 http://pullenti.ru/competitorpage.aspx?AspxAutoDetectCookieSupport=1
@@ -28,13 +44,46 @@ http://pullenti.ru/Default.aspx
 https://github.com/igor-shevchenko/rutermextract 
 Библиотека для извлечения ключевых слов из текстов на русском языке. Для морфологического анализа используется pymorphy2. Разработка вдохновлена библиотекой topia.termextract, которая делает то же самое с англоязычными текстами.
 
-https://github.com/yandex/tomita-parser/
-Томита-парсер создан для извлечения структурированных данных из текста на естественном языке. Вычленение фактов происходит при помощи контекстно-свободных грамматик и словарей ключевых слов. Парсер позволяет писать свои грамматики и добавлять словари для нужного языка. 
+GLR-парсер
+    https://github.com/yandex/tomita-parser/
+    Томита-парсер создан для извлечения структурированных данных из текста на естественном языке. Вычленение фактов происходит при помощи контекстно-свободных грамматик и словарей ключевых слов. Парсер позволяет писать свои грамматики и добавлять словари для нужного языка. 
+    https://tech.yandex.ru/tomita/
+    https://habr.com/company/yandex/blog/225723/
+    https://habr.com/company/yandex/blog/205198/
+    https://habr.com/company/yandex/blog/219311/
 
 
 Практический итог
 https://www.i-teco.ru/solutions/business_intelligence_products/analytical_courier/
 ####################################################################
+google
+####################################################################
+RusVectores
+Deep Learning
+Python based Orange and NTLK
+Polyglot 
+Gensim 
+Scikit-learn 
+Spacy 
+nltk 
+    http://www.nltk.org/
+    https://www.taygan.co/blog/2018/01/12/text-mining-potus-with-python
+
+textmining 1.0 https://www.christianpeccei.com/textmining/
+scrapy
+urllib
+
+Машинное обучение
+    байесовские методы
+    метод опорных векторов
+    деревья решений
+    использование  нейронных  сетей
+    
+
+
+####################################################################
+Remove the HTML tags
+Beautiful Soup library
 
 Statistics in Python
 https://www.upwork.com/hiring/data/15-python-libraries-data-science/
@@ -48,10 +97,15 @@ https://ru.wikipedia.org/wiki/NumPy
 Visual
 http://bokeh.pydata.org/en/latest/
 
+Найти
+Moerchen  F.,  Brinker  K.,  Neubauer  C.,  Any-Time  Clustering  of  High 
+Frequency  News  Streams,  The  Thirteenth  ACM  SIGKDD  Int'l.  Conference  on 
+Knowledge Discovery and Data Mining: Data Mining Case Studies Workshop (DMCS), 
+ACM Press, 23-31
 
-
-
+Google's Word2Vec    -> for natural language processing
 https://www.kaggle.com/c/word2vec-nlp-tutorial#description
+
 DATA MINING https://www.intuit.ru/studies/courses/6/6/info
 
 https://www.analyticsvidhya.com/blog/2018/02/the-different-methods-deal-text-data-predictive-python/
@@ -62,39 +116,17 @@ https://github.com/rasbt/pattern_classification
 https://github.com/andersbll/deeppy
 
 
+
 https://habr.com/post/414165/
 
 https://medium.com/activewizards-machine-learning-company/comparison-of-top-6-python-nlp-libraries-c4ce160237eb
 
-
-
-
-Deep Learning
-
-Python based Orange and NTLK
-
-
-
-
-Polyglot 
-Gensim 
-Scikit-learn 
-Spacy 
-nltk 
-    http://www.nltk.org/
-    https://www.taygan.co/blog/2018/01/12/text-mining-potus-with-python
-
-textmining 1.0 https://www.christianpeccei.com/textmining/
-
-
-scrapy
-urllib
-
-Google's Word2Vec    -> for natural language processing
-
-Beautiful Soup library     -> First, we'll remove the HTML tags.
-
+LSPL  –  это  язык,  предназначенный  для  формального  описания  выражений русского языка для их дальнейшего извлечения из текста и последующей обработки
 R For Data Science Talks?????
 
 
+
+####################################################################
+next step
+####################################################################
 whatsapp https://www.zeolearn.com/magazine/introduction-to-text-mining-in-whatsapp-chats-using-python-part-1
