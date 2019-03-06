@@ -1,13 +1,16 @@
 ##################################################################
-statistic & analysis
+Решения по statistic & analysis & text data mining
 ##################################################################
-text data mining
+
+
 ##################################################################
 Цель --->>> ???
             выделение фамилий -> личностей
 
             генерация сюжетов
             аннотации  к  новостям
+
+            как содержание сообщения влияет на аудиторию?
 ##################################################################
 
 - Удаление стоп-слов.
@@ -31,7 +34,8 @@ text data mining
     Система  Maui
     АОТ «ДИАЛИНГ»
     «Ашманов  и  партнёры»
-
+    QDA Miner
+    WordStat
 ####################################################################
 
 Список проектов предоставляющих API
@@ -58,6 +62,7 @@ https://www.i-teco.ru/solutions/business_intelligence_products/analytical_courie
 ####################################################################
 google
 ####################################################################
+python text analysis olap data mining
 RusVectores
 Deep Learning
 Python based Orange and NTLK
@@ -70,8 +75,18 @@ nltk
     https://www.taygan.co/blog/2018/01/12/text-mining-potus-with-python
 
 textmining 1.0 https://www.christianpeccei.com/textmining/
+
+
+Petrovich - для склонения русскоязычных имён, фамилий и отчеств.
+http://malukhin.ru/?p=2533
+
+
+aiohttp
 scrapy
 urllib
+
+
+
 
 Машинное обучение
     байесовские методы
@@ -97,7 +112,11 @@ https://ru.wikipedia.org/wiki/NumPy
 Visual
 http://bokeh.pydata.org/en/latest/
 
+####################################################################
 Найти
+####################################################################
+модель Гарольда Д. Лассуэла
+
 Moerchen  F.,  Brinker  K.,  Neubauer  C.,  Any-Time  Clustering  of  High 
 Frequency  News  Streams,  The  Thirteenth  ACM  SIGKDD  Int'l.  Conference  on 
 Knowledge Discovery and Data Mining: Data Mining Case Studies Workshop (DMCS), 
