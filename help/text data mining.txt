@@ -99,6 +99,8 @@ urllib
 ####################################################################
 Remove the HTML tags
 Beautiful Soup library
+Парсинг - 90% html и 10% в chromium
+
 
 Statistics in Python
 https://www.upwork.com/hiring/data/15-python-libraries-data-science/
