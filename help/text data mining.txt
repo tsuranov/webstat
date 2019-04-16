@@ -82,11 +82,11 @@ http://malukhin.ru/?p=2533
 
 
 aiohttp
-scrapy
-urllib
-
-
-
+scrapy - асинхронный фреймворк для парсинга страниц
+urllib & urllib2
+pandas - для анализа данных
+Pyparsing - синтаксического анализа для языка Python
+http://python.su/forum/topic/23472/?page=1#post-123425
 
 Машинное обучение
     байесовские методы
